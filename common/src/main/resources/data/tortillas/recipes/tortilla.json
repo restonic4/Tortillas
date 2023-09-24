@@ -1,0 +1,22 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "PPP",
+    "EEE",
+    "PPP"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:egg",
+      "data": 0
+    },
+    "P": {
+      "item": "minecraft:potato",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "tortillas:tortilla",
+    "count": 1
+  }
+}

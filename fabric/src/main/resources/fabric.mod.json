@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "tortillas",
+  "version": "${version}",
+
+  "name": "Tortillas",
+  "description": "A mod that adds tortillas",
+  "authors": [],
+  "contact": {},
+
+  "license": "All Rights Reserved",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.restonic4.tortillas.fabric.TortillasFabric"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.22",
+    "minecraft": ">=1.20"
+  }
+}
