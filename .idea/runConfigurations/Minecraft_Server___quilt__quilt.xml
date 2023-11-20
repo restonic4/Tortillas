@@ -1,10 +1,10 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" factoryName="Application" name="Minecraft Server (:fabric)" type="Application">
+  <configuration default="false" factoryName="Application" name="Minecraft Server (:quilt)" type="Application">
     <option name="MAIN_CLASS_NAME" value="dev.architectury.transformer.TransformerRuntime"/>
-    <module name="Tortillas.fabric.main"/>
+    <module name="Tortillas.quilt.main"/>
     <option name="PROGRAM_PARAMETERS" value="nogui"/>
-    <option name="VM_PARAMETERS" value="-Dfabric.dli.config=C:\Users\marco\IdeaProjects\Tortillas\fabric\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=server -Dfabric.dli.main=net.fabricmc.loader.impl.launch.knot.KnotServer -Darchitectury.main.class=C:\Users\marco\IdeaProjects\Tortillas\fabric\.gradle\architectury\.main_class -Darchitectury.runtime.transformer=C:\Users\marco\IdeaProjects\Tortillas\fabric\.gradle\architectury\.transforms -Darchitectury.properties=C:\Users\marco\IdeaProjects\Tortillas\fabric\.gradle\architectury\.properties -Djdk.attach.allowAttachSelf=true -javaagent:C:\Users\marco\IdeaProjects\Tortillas\.gradle\architectury\architectury-transformer-agent.jar"/>
-    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fabric/run/"/>
+    <option name="VM_PARAMETERS" value="-Dfabric.dli.config=C:\Users\marco\IdeaProjects\Tortillas\quilt\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=server -Dfabric.dli.main=org.quiltmc.loader.impl.launch.knot.KnotServer -Darchitectury.main.class=C:\Users\marco\IdeaProjects\Tortillas\quilt\.gradle\architectury\.main_class -Darchitectury.runtime.transformer=C:\Users\marco\IdeaProjects\Tortillas\quilt\.gradle\architectury\.transforms -Darchitectury.properties=C:\Users\marco\IdeaProjects\Tortillas\quilt\.gradle\architectury\.properties -Djdk.attach.allowAttachSelf=true -javaagent:C:\Users\marco\IdeaProjects\Tortillas\.gradle\architectury\architectury-transformer-agent.jar"/>
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/quilt/run/"/>
     <method v="2">
       <option enabled="true" name="Make"/>
     </method>

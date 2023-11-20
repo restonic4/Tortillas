@@ -1,41 +1,38 @@
 package me.restonic4.tortillas.item;
 
-import dev.architectury.registry.registries.DeferredRegister;
-import dev.architectury.registry.registries.RegistrySupplier;
-import me.restonic4.tortillas.Tortillas;
+import me.restonic4.restapi.RestApi;
+import me.restonic4.restapi.holder.RestItem;
+import me.restonic4.restapi.item.ItemRegistry;
+import me.restonic4.restapi.util.CustomItemProperties;
 import me.restonic4.tortillas.creative_tab.CreativeTabRegister;
 import me.restonic4.tortillas.item.custom.FryingPan;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Tiers;
 
-@SuppressWarnings("UnstableApiUsage")
+import static me.restonic4.tortillas.Tortillas.MOD_ID;
+
 public class ItemRegister {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Tortillas.MOD_ID, Registries.ITEM);
+    public static MobEffectInstance TORTILLA_SANDWICH_EFFECT = ItemRegistry.CreateExistingEffect(MobEffects.HEALTH_BOOST, (20*60*5),2);
 
-    public static final RegistrySupplier<Item> TORTILLA = registerFood("tortilla", FoodRegister.TORTILLA);
-    public static final RegistrySupplier<Item> TORTILLA_SLICE = registerFood("tortilla_slice", FoodRegister.TORTILLA_SLICE);
-    public static final RegistrySupplier<Item> TORTILLA_WITH_BEETROOT = registerFood("tortilla_with_beetroot", FoodRegister.TORTILLA_WITH_BEETROOT);
-    public static final RegistrySupplier<Item> TORTILLA_SANDWICH = registerFood("tortilla_sandwich", FoodRegister.TORTILLA_SANDWICH);
+    public static RestItem TORTILLA = ItemRegistry.CreateFood(MOD_ID, "tortilla", CreativeTabRegister.TORTILLAS_TAB, 8, 1.7f);
+    public static RestItem TORTILLA_SLICE = ItemRegistry.CreateFood(MOD_ID, "tortilla_slice", CreativeTabRegister.TORTILLAS_TAB, 1, 0.29f);
+    public static RestItem TORTILLA_WITH_BEETROOT = ItemRegistry.CreateFood(MOD_ID, "tortilla_with_beetroot", CreativeTabRegister.TORTILLAS_TAB, 10, 2);
+    public static RestItem TORTILLA_SANDWICH = ItemRegistry.CreateFoodWithEffect(MOD_ID, "tortilla_sandwich", CreativeTabRegister.TORTILLAS_TAB, 20, 5, TORTILLA_SANDWICH_EFFECT, 1);
 
-    public static final RegistrySupplier<Item> FRYING_PAN =
-            ITEMS.register(
-                    "frying_pan",
-                    () -> new FryingPan(Tiers.IRON, 4, -2, new Item.Properties().arch$tab(CreativeTabRegister.TORTILLAS_TAB).durability(500))
-            );
+    public static RestItem FRYING_PAN = ItemRegistry.CreateCustom(
+            MOD_ID,
+            "frying_pan",
+            () -> new FryingPan(
+                        Tiers.IRON,
+                        4,
+                        -2,
+                        new CustomItemProperties().tab(CreativeTabRegister.TORTILLAS_TAB).durability(500).build()
+                )
+    );
 
-    static RegistrySupplier<Item> registerFood(String itemID, FoodProperties foodProperties) {
-        return ITEMS.register(
-                itemID,
-                () -> new Item(new Item.Properties().arch$tab(CreativeTabRegister.TORTILLAS_TAB).food(foodProperties))
-        );
-    }
-
-    public static void Register() {
-        ITEMS.register();
-        Tortillas.LOGGER.info("[" + Tortillas.MOD_ID + "] Items registered");
+    public static void register() {
+        ItemRegistry.Register(MOD_ID);
+        RestApi.Log("Items registered", MOD_ID);
     }
 }

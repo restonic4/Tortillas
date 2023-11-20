@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Minecraft Client (:quilt)" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="dev.architectury.transformer.TransformerRuntime" />
+    <module name="Tortillas.quilt.main" />
+    <option name="PROGRAM_PARAMETERS" value="" />
+    <option name="VM_PARAMETERS" value="-Dfabric.dli.config=C:\Users\marco\IdeaProjects\Tortillas\quilt\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=client -Dfabric.dli.main=org.quiltmc.loader.impl.launch.knot.KnotClient -Darchitectury.main.class=C:\Users\marco\IdeaProjects\Tortillas\quilt\.gradle\architectury\.main_class -Darchitectury.runtime.transformer=C:\Users\marco\IdeaProjects\Tortillas\quilt\.gradle\architectury\.transforms -Darchitectury.properties=C:\Users\marco\IdeaProjects\Tortillas\quilt\.gradle\architectury\.properties -Djdk.attach.allowAttachSelf=true -javaagent:C:\Users\marco\IdeaProjects\Tortillas\.gradle\architectury\architectury-transformer-agent.jar" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/quilt/run/" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+    <envs>
+      
+    </envs>
+    <shortenClasspath name="ARGS_FILE" />
+  </configuration>
+</component>
