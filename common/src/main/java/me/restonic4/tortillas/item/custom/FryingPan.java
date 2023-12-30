@@ -15,7 +15,7 @@ public class FryingPan extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
-        pAttacker.level().playSound(null, pAttacker.getX(), pAttacker.getY(), pAttacker.getZ(), SoundRegister.FRYING_PAN.get().get(), SoundSource.PLAYERS, 1.0F, Tortillas.getRandomFloat(0.75f,1.25f));
+        pAttacker.level.playSound(null, pAttacker.getX(), pAttacker.getY(), pAttacker.getZ(), SoundRegister.FRYING_PAN.get().get(), SoundSource.PLAYERS, 1.0F, Tortillas.getRandomFloat(0.75f,1.25f));
 
         return super.hurtEnemy(pStack, pTarget, pAttacker);
     }

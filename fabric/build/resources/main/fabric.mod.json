@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "tortillas",
+  "version": "1.1-1.19.3-fabric",
+
+  "name": "Tortillas",
+  "description": "A mod that adds tortillas",
+  "authors": [],
+  "contact": {},
+
+  "license": "All Rights Reserved",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.restonic4.tortillas.fabric.TortillasFabric"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.22",
+    "minecraft": ">=1.19.3",
+    "architectury": ">=7.1.86",
+    "restapi": "=0.9-1.19.3-Fabric"
+  }
+}
