@@ -11,6 +11,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 
+import static me.restonic4.tortillas.Tortillas.LOGGER;
 import static me.restonic4.tortillas.Tortillas.MOD_ID;
 
 public class ItemRegister {
@@ -34,6 +35,6 @@ public class ItemRegister {
 
     public static void register() {
         ItemRegistry.Register(MOD_ID);
-        RestApi.Log("Items registered", MOD_ID);
+        LOGGER.log("Items registered");
     }
 }
